@@ -33,7 +33,8 @@ public class Request {
      */
     private static final UserData USER_DATA = UserData.getInstance();
 
-    public static String UserAgent = "";
+    // mac chrome user agent
+    public static String UserAgent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4324.192 Safari/537.36";
 
     private Request() {}
 
@@ -125,7 +126,7 @@ public class Request {
      */
     public static void waitFor() {
         try{
-            Thread.sleep(new Random().nextInt(4)*1000);
+            Thread.sleep(new Random().nextInt(10)*1000);
         } catch (Exception e){
             log.warn("等待过程中出错",e);
         }
