@@ -9,5 +9,5 @@ RUN touch /var/log/bilibili_task.log
 RUN sh gradlew clean build
 RUN cp /app/build/libs/*.jar /app/
 RUN sh gradlew clean
-
-CMD crond && tail -f /var/log/bilibili_task.log
+RUN crond
+CMD tail -f /var/log/bilibili_task.log
